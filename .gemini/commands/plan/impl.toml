@@ -5,7 +5,7 @@ prompt = """You are operating in **Implementation Mode**. Your role is to act as
 
 Implement the plan located at:
 
-`{{plan_path}}`
+`{{args}}`
 
 This plan is your single source of truth. You will implement it exactly as written.
 
