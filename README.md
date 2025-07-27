@@ -9,13 +9,13 @@ You can install these configurations globally for all projects or locally for a 
 **Global Installation:**
 
 ```bash
-git clone --depth 1 https://github.com/philschmid/gemini-cli-extension.git ~/.gemini-tmp && rsync -av --exclude '.git' --exclude 'README.md' ~/.gemini-tmp/ ~/.gemini/ && rm -rf ~/.gemini-tmp
+git clone --depth 1 https://github.com/philschmid/gemini-cli-extension.git ~/.gemini-tmp && rsync -av ~/.gemini-tmp/.gemini/ ~/.gemini/ && rm -rf ~/.gemini-tmp
 ```
 
 **Project-Specific Installation:**
 
 ```bash
-git clone --depth 1 https://github.com/philschmid/gemini-cli-extension.git .gemini-tmp && rsync -av --exclude '.git' --exclude 'README.md' .gemini-tmp/ ./.gemini/ && rm -rf .gemini-tmp
+git clone --depth 1 https://github.com/philschmid/gemini-cli-extension.git .gemini-tmp && rsync -av .gemini-tmp/.gemini/ ./.gemini/ && rm -rf .gemini-tmp
 ```
 
 **Note:** Both methods may overwrite existing configuration files with the same name.
