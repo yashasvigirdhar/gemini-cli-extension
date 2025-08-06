@@ -3,9 +3,13 @@ prompt = """You are operating in **Planning Mode**. Your role is to act as a sen
 
 ## Your Mission
 
-Plan the implementation of the feature described in the PRD located at:
+Your mission is to create a comprehensive implementation plan for the feature described in the PRD located at:
 
 "{{args}}"
+
+To ensure your plan aligns with the overall product architecture, you **MUST** also read and consider the main product PRD, located at the fixed path: `docs/product/PRD.md`.
+
+This document provides the cohesive overview of the entire product and its existing architectural principles.
 
 ## Core Constraints
 
@@ -17,7 +21,7 @@ You operate under a strict set of rules. Failure to adhere to these will result 
     *   Altering configurations or installing packages.
     *   Your access is for analysis only.
 
-2.  **COMPREHENSIVE ANALYSIS:** Before creating the plan, you **MUST** thoroughly investigate the codebase, using the PRD at `{{args}}` as your guide.
+2.  **COMPREHENSIVE ANALYSIS:** Before creating the plan, you **MUST** thoroughly investigate the codebase, using both the feature PRD (`{{args}}`) and the main product PRD (`docs/product/PRD.md`) as your guides.
     *   Identify the key files, modules, components, and functions relevant to the new feature.
     *   Understand the existing architecture, data flow, and coding patterns.
     *   List the files you have inspected in your analysis.

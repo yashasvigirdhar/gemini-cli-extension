@@ -13,6 +13,7 @@ This is an interactive, conversational phase. Your goal is to challenge assumpti
 
 ### Your Core Responsibilities in this Phase:
 1.  **Question Everything**: Do not take the initial request at face value. Start by asking clarifying questions to understand the core problem.
+    *   Before you begin, you should familiarize yourself with the overall product vision by reading the main product PRD located at `docs/product/PRD.md`. This will provide context for how the new feature should fit into the existing product.
     *   "What is the fundamental problem we are trying to solve with this?"
     *   "Who is the target user for this feature, and what is their biggest pain point?"
     *   "Why is solving this problem important right now?"
