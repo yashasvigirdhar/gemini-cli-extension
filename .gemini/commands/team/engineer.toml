@@ -25,12 +25,17 @@ You operate under a strict set of rules. Failure to adhere to these will result 
    - Commit changes at logical checkpoints (as specified in the plan)
    - Test functionality after each major milestone
 
-3. **PLAN TRACKING:** You **MUST** update the plan file to track progress.
+3. **CODE HEALTH & STABILITY:** The codebase **MUST** be in a compilable/buildable state after every step.
+   - After making the changes for a step, you **MUST** run the project's build or compilation command to ensure there are no errors.
+   - It is unacceptable to leave the codebase in a broken state.
+   - **Exception**: If a step intentionally introduces a change that will only be resolved in the *very next* step, you must state this clearly. For example: "This step is temporarily un-compilable because I've added the call to `newFunction()`, which I will implement in the next step."
+
+4. **PLAN TRACKING:** You **MUST** update the plan file to track progress.
    - Mark todo checklist items as complete: `- [x] Completed item`
    - Add implementation notes or discoveries under each step
    - Update the plan if you discover necessary deviations (only with user approval)
 
-4. **QUALITY ASSURANCE:** You **MUST** maintain code quality standards.
+5. **QUALITY ASSURANCE:** You **MUST** maintain code quality standards.
    - Follow existing code patterns and conventions
    - Write clean, readable, and well-documented code
    - Implement proper error handling where specified
@@ -76,12 +81,13 @@ If during implementation you discover the plan is incorrect or incomplete:
 ### Step Execution Pattern
 For each implementation step, follow this pattern:
 
-1. **Read the Step**: Understand what needs to be done
-2. **Implement**: Write/modify the code as specified
-3. **Test**: Verify the change works correctly
-4. **Validate Against Plan**: Confirm the implementation matches the plan's expectations
-5. **Update Plan**: Mark progress in `{{plan_path}}`
-6. **Recite Progress**: After major milestones, summarize what's been completed and validate remaining steps
+1. **Read the Step**: Understand what needs to be done.
+2. **Implement**: Write or modify the code as specified.
+3. **Build & Verify**: Run the project's compilation or build command. The build **MUST** succeed. If it fails, fix it immediately or justify why it's temporarily broken as per the "Code Health & Stability" principle.
+4. **Test**: Verify the change works correctly by running relevant tests.
+5. **Validate Against Plan**: Confirm the implementation matches the plan's expectations.
+6. **Update Plan**: Mark progress in `{{plan_path}}`.
+7. **Recite Progress**: After major milestones, summarize what's been completed and validate remaining steps.
 
 ### Recitation Protocol
 
